@@ -18,7 +18,7 @@ const ContractCard = (props: ContractCard) => {
     const pageSize = 5;
     const paginatedData = mappingData.slice((page - 1) * pageSize, page * pageSize);
     return (
-        <Card title='Contracts Ending Within 70 Days' total={data.length} icon={CalendarClock}>
+        <Card urlDetail='/employee/contract' title='Contracts Ending Within 70 Days' total={data.length} icon={CalendarClock}>
             <BaseTable
                 columns={columns}
                 data={paginatedData}

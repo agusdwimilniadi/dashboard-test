@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LoaderIcon } from "lucide-react";
+import { Button } from "../ui/button";
 
 export type Column = {
     header: string;
@@ -84,21 +85,21 @@ const BaseTable: React.FC<BaseTableProps> = ({
                     <span>
                         Page {currentPage} of {totalPages}
                     </span>
-                    <div className="space-x-2">
-                        <button
+                    <div className="space-x-2 text-xs">
+                        <Button
                             onClick={() => handlePageChange(currentPage - 1)}
                             disabled={currentPage === 1}
-                            className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
+                            className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-primary text-xs disabled:opacity-50"
                         >
-                            Previous
-                        </button>
-                        <button
+                            Prev
+                        </Button>
+                        <Button
                             onClick={() => handlePageChange(currentPage + 1)}
                             disabled={currentPage === totalPages}
-                            className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
+                            className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-primary text-xs disabled:opacity-50"
                         >
                             Next
-                        </button>
+                        </Button>
                     </div>
                 </div>
             )}

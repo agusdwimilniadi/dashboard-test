@@ -16,7 +16,7 @@ const KPICard = (props: IKPICard) => {
     const pageSize = 5;
     const paginatedData = customizeData.slice((page - 1) * pageSize, page * pageSize);
     return (
-        <Card title='Employee Performance Metrics' total={data.length} icon={BarChart2}>
+        <Card urlDetail="/employee/kpi" title='Employee Performance Metrics' total={data.length} icon={BarChart2}>
             <BaseTable
                 columns={columns}
                 data={paginatedData}

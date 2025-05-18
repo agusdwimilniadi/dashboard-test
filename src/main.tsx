@@ -5,16 +5,22 @@ import './index.css'
 import App from './App'
 import DashboardHome from './pages/dashboard/Home'
 import NotFound from './pages/NotFound'
+import { AuthProvider } from './context/AuthContext'
+import PrivateRoute from './lib/router/PrivateRoute'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<DashboardHome />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route element={<PrivateRoute />}>
+              <Route index element={<DashboardHome />} />
+            </Route>
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   </StrictMode>,
 )

@@ -20,13 +20,13 @@ import { cn } from "@/lib/utils"
 const items = [
     {
         title: "Dashboard",
-        url: "/dashboard",
+        url: "/",
         isActive: true,
         icon: LayoutGrid,
     },
     {
         title: "Employee",
-        url: "#",
+        url: "/employee",
         isActive: false,
         icon: User,
     },
