@@ -7,6 +7,8 @@ Live: [fe-test-agusdm.netlify.app](https://fe-test-agusdm.netlify.app)
 
 GitHub: [github.com/agusdwimilniadi/dashboard-test](https://github.com/agusdwimilniadi/dashboard-test)
 
+Mockup : [Link](https://www.figma.com/design/oTH3oAFDDcEaMVd13ukXKN/UI-Coding-Test?node-id=0-1&t=4USdzbrGOYgFZh4L-1)
+
 ---
 
 ## Features
